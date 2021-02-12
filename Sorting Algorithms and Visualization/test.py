@@ -17,11 +17,12 @@ def visualization(array):
     for i in range(len(array)):
         MAX = max(array)
         Zone.create_rectangle(width/len(array)*i, (MAX-array[i])*(height/MAX), width/len(array)*(i+1), height, width=5, outline="blue", fill="royalblue")
+        time.sleep(1/len(arr))
+        Zone.update()
 
 arr = list(range(1, 101))
 shuffled_array = random.sample(arr, len(arr))
 visualization(arr)
-time.sleep(1)
 visualization(shuffled_array)
 
 fen.mainloop()
