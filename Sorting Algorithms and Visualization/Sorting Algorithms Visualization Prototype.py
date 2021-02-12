@@ -111,7 +111,7 @@ def printArray(array):
     Zone.create_rectangle(0, 0, width, height, fill="grey")
     for i in range(len(array)):
         MAX = max(array)
-        Zone.create_rectangle(width/len(array)*i, (MAX-array[i])*(height/MAX), width/len(array)*(i+1), height, width=5, outline="blue", fill="royalblue")
+        Zone.create_rectangle((width-200)/len(array)*i+100, (MAX-array[i])*((height-200)/MAX)+100, (width-200)/len(array)*(i+1)+100, height-100, width=5, outline="blue", fill="royalblue")
         time.sleep(1/len(arr))
         Zone.update()
 
@@ -119,7 +119,7 @@ def visualization(array):
     Zone.create_rectangle(0, 0, width, height, fill="grey")
     for i in range(len(array)):
         MAX = max(array)
-        Zone.create_rectangle(width/len(array)*i, (MAX-array[i])*(height/MAX), width/len(array)*(i+1), height, width=5, outline="blue", fill="royalblue")
+        Zone.create_rectangle((width-200)/len(array)*i+100, (MAX-array[i])*((height-200)/MAX)+100, (width-200)/len(array)*(i+1)+100, height-100, width=5, outline="blue", fill="royalblue")
     Zone.update()
 
 def reset(arr, shuffled_array):
@@ -130,42 +130,42 @@ def reset(arr, shuffled_array):
 arr = list(range(1, 31))
 
 message = tk.Label(fen,text="Algorithme 1/6 - SelectionSort !",fg = "light green",bg = "dark green",font = "Helvetica 16 bold italic")
-message.place(x= 400,y=50)
+message.place(x= 800,y=50)
 message.after(5000, message.destroy)
 shuffled_array = random.sample(arr, len(arr))
 reset(arr, shuffled_array)
 SelectionSort(shuffled_array)
 
 message = tk.Label(fen,text="Algorithme 2/6 - bubbleSort !",fg = "light green",bg = "dark green",font = "Helvetica 16 bold italic")
-message.place(x= 400,y=50)
+message.place(x= 800,y=50)
 message.after(10000, message.destroy)
 shuffled_array = random.sample(arr, len(arr))
 reset(arr, shuffled_array)
 bubbleSort(shuffled_array)
 
 message = tk.Label(fen,text="Algorithme 3/6 - insertionSort !",fg = "light green",bg = "dark green",font = "Helvetica 16 bold italic")
-message.place(x= 400,y=50)
+message.place(x= 800,y=50)
 message.after(15000, message.destroy)
 shuffled_array = random.sample(arr, len(arr))
 reset(arr, shuffled_array)
 insertionSort(shuffled_array)
 
 message = tk.Label(fen,text="Algorithme 4/6 - quickSort !",fg = "light green",bg = "dark green",font = "Helvetica 16 bold italic")
-message.place(x= 400,y=50)
+message.place(x= 800,y=50)
 message.after(15000, message.destroy)
 shuffled_array = random.sample(arr, len(arr))
 reset(arr, shuffled_array)
 quickSort(shuffled_array, 0, len(shuffled_array)-1)
 
 message = tk.Label(fen,text="Algorithme 5/6 - heapSort !",fg = "light green",bg = "dark green",font = "Helvetica 16 bold italic")
-message.place(x= 400,y=50)
+message.place(x= 800,y=50)
 message.after(10000, message.destroy)
 shuffled_array = random.sample(arr, len(arr))
 reset(arr, shuffled_array)
 heapSort(shuffled_array)
 
 message = tk.Label(fen,text="Algorithme 6/6 - radixSort !",fg = "light green",bg = "dark green",font = "Helvetica 16 bold italic")
-message.place(x= 400,y=50)
+message.place(x= 800,y=50)
 message.after(10000, message.destroy)
 shuffled_array = random.sample(arr, len(arr))
 reset(arr, shuffled_array)
